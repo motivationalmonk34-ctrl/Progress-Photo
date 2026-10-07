@@ -1,0 +1,25 @@
+:root { --ink:#1c1b19; --paper:#f6f5f2; --line:#d9d6cf; --before:#c2410c; --during:#1d4ed8; --after:#15803d; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background:var(--paper); color:var(--ink); line-height:1.45; }
+main { max-width: 640px; margin: 0 auto; padding: 16px 16px 96px; }
+h1 { font-size: 1.4rem; margin: 8px 0 16px; }
+h2 { font-size: 1.1rem; margin: 0; }
+a { color: var(--during); }
+.top { display:flex; justify-content:space-between; align-items:baseline; }
+input[type=text] { width:100%; padding:12px; font-size:1rem; border:1px solid var(--line); border-radius:6px; background:#fff; margin-bottom:8px; }
+.stage { background:#fff; border:1px solid var(--line); border-left-width:6px; border-radius:6px; padding:12px; margin:14px 0; }
+.stage.BEFORE { border-left-color: var(--before); } .stage.DURING { border-left-color: var(--during); } .stage.AFTER { border-left-color: var(--after); }
+.head { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.btn { display:inline-block; padding:10px 14px; background:var(--ink); color:#fff; border-radius:6px; font-size:.95rem; cursor:pointer; border:0; }
+.btn.off { opacity:.35; pointer-events:none; }
+.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; }
+.grid div { position:relative; }
+.grid img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px; display:block; }
+.grid button { position:absolute; top:4px; right:4px; border:0; background:rgba(0,0,0,.65); color:#fff; border-radius:50%; width:26px; height:26px; font-size:1rem; }
+.empty { color:#777; font-size:.9rem; margin:0; }
+.bar { position:fixed; left:0; right:0; bottom:0; padding:12px 16px; background:var(--paper); border-top:1px solid var(--line); }
+.bar .btn { width:100%; max-width:608px; display:block; margin:0 auto; background:#128c7e; padding:14px; font-size:1.05rem; }
+.bar .btn:disabled { opacity:.4; }
+.msg { margin:8px 0; font-size:.9rem; }
+.report { background:#fff; border:1px solid var(--line); border-radius:6px; padding:12px; margin-bottom:14px; }
+.report small { color:#666; }
